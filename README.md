@@ -11,6 +11,8 @@ First install dependencies:
 
 # Usage
 
+Edit the config.yml file to configure you Stomp server and SMTP server settings.
+
 Start the server:
 
     ./bin/app.pl

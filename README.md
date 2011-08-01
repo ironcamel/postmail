@@ -11,7 +11,7 @@ First install dependencies:
 
 # Usage
 
-Edit the config.yml file to configure you Stomp server and SMTP server settings.
+Edit the config.yml file to configure your Stomp message broker and SMTP server settings.
 
 Start the server:
 
@@ -31,3 +31,13 @@ Send an email:
         "body":    "bye"
     }
     EOD
+
+# Stomp Message Broker
+
+It is very easy to get a Stomp message broker up and running:
+
+    sudo cpanm POE::Component::MessageQueue
+    mq.pl
+
+Running `mq.pl` will start a broker on localhost listening on port 61613.
+The default stomp settings in config.yml will just work.

@@ -6,10 +6,11 @@ use Email::Sender::Transport::SMTP;
 use Email::Simple;
 use Net::Stomp;
 use JSON qw(from_json);
+use FindBin qw($RealBin);
 use Try::Tiny;
 use YAML::XS qw(LoadFile);
 
-my %config = %{LoadFile("../config.yml")->{postmail}};
+my %config = %{LoadFile("$RealBin/../config.yml")->{postmail}};
 my $transport = Email::Sender::Transport::SMTP->new({
     host          => $config{email}{host},
     port          => $config{email}{port},

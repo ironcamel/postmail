@@ -7,7 +7,7 @@ Simple Email Service.
 
 First install dependencies:
 
-    sudo cpanm Dancer Email::Sender Email::Simple Net::Stomp Plack JSON Try::Tiny YAML::XS
+    sudo cpanm Dancer Email::Sender Email::Simple Net::Stomp Plack JSON Try::Tiny YAML YAML::XS
 
 # Usage
 
@@ -40,4 +40,4 @@ It is very easy to get a Stomp message broker up and running:
     mq.pl
 
 Running `mq.pl` will start a broker on localhost listening on port 61613.
-The default stomp settings in config.yml will just work.
+The default stomp settings in config.yml will then just work.

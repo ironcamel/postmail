@@ -3,8 +3,7 @@ appname: postmail
 charset: UTF-8
 
 postmail:
-    stomp:
-        queue: /queue/postmail
+    queue: /queue/postmail
     email:
         host: smtp.foo.com
         port: 25

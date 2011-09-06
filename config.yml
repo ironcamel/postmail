@@ -4,11 +4,14 @@ charset: UTF-8
 
 postmail:
     stomp:
-        host: localhost
-        port: 61613
         queue: /queue/postmail
     email:
         host: smtp.foo.com
         port: 25
         username:
         password:
+
+plugins:
+    Stomp:
+        postmail:
+            hostname: localhost

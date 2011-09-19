@@ -5,12 +5,13 @@ charset: UTF-8
 postmail:
     queue: /queue/postmail
     email:
-        host: smtp.foo.com
-        port: 25
-        username:
-        password:
+        host: smtp.googlemail.com
+        port: 587
+        username: khaled@crowdtilt.com
+        password: welcomewelcome
 
 plugins:
     Stomp:
         postmail:
             hostname: localhost
+            port: 61613

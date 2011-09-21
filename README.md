@@ -1,7 +1,9 @@
 # About
 
-Postmail is a simple REST based service for sending email. Similar to Amazon's
-Simple Email Service.
+Postmail is a simple REST based service for sending email. 
+Similar to Amazon's Simple Email Service.
+It is asynchronous and highly scalable.
+Emails are placed on a job queue and multiple workers can process them independently.
 
 # Installation
 
@@ -37,7 +39,7 @@ Send an email:
 It is very easy to get a Stomp message broker up and running:
 
     sudo cpanm POE::Component::MessageQueue
-    mq.pl
+    sudo mq.pl
 
-Running `mq.pl` will start a broker on localhost listening on port 61613.
+Running `sudo mq.pl` will start a broker on localhost listening on port 61613.
 The default stomp settings in config.yml will then just work.

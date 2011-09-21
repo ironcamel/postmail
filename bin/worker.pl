@@ -13,12 +13,12 @@ use YAML::XS qw(LoadFile);
 
 my %config = %{LoadFile("$RealBin/../config.yml")};
 my $transport;
-if ($config{postmail}{tls} == 1){
+if ($config{postmail}{tls}) {
     $transport = Email::Sender::Transport::SMTP::TLS->new({
         host          => $config{postmail}{email}{host},
         port          => $config{postmail}{email}{port},
-        username => $config{postmail}{email}{username},
-        password => $config{postmail}{email}{password},
+        username      => $config{postmail}{email}{username},
+        password      => $config{postmail}{email}{password},
     });
 } else {
     $transport = Email::Sender::Transport::SMTP->new({

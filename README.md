@@ -7,7 +7,7 @@ Simple Email Service.
 
 First install dependencies:
 
-    sudo cpanm Dancer Email::Sender Email::Simple Dancer::Plugin::Stomp Plack JSON Try::Tiny YAML YAML::XS
+    sudo cpanm Dancer Email::Sender Email::Sender::Transport::SMTP::TLS Email::Simple Dancer::Plugin::Stomp Plack JSON Try::Tiny YAML YAML::XS
 
 # Usage
 

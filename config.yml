@@ -4,6 +4,7 @@ charset: UTF-8
 
 postmail:
     queue: /queue/postmail
+    tls: 0
     email:
         host: smtp.foo.com
         port: 25

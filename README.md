@@ -3,13 +3,14 @@
 Postmail is a simple REST based service for sending email. 
 Similar to Amazon's Simple Email Service.
 It is asynchronous and highly scalable.
-Emails are placed on a job queue and multiple workers can process them independently.
+Emails are placed on a job queue and multiple workers process them
+independently.
 
 # Installation
 
 First install dependencies:
 
-    sudo cpanm Dancer Email::Sender Email::Sender::Transport::SMTP::TLS Email::Simple Dancer::Plugin::Stomp Plack JSON Try::Tiny YAML YAML::XS
+    sudo cpanm Email::Sender Email::Sender::Transport::SMTP::TLS Email::Simple Dancer::Plugin::Stomp JSON Starman Try::Tiny YAML
 
 # Usage
 
@@ -17,7 +18,7 @@ Edit the config.yml file to configure your Stomp message broker and SMTP server 
 
 Start the server:
 
-    ./bin/app.pl
+    plackup -s Starman ./bin/app.pl
 
 Start the worker:
 
@@ -25,7 +26,7 @@ Start the worker:
 
 Send an email:
 
-    lwp-request -m POST http://localhost:3000/email <<EOD
+    lwp-request -m POST http://localhost:5000/email <<EOD
     {
         "from":    "bob@foo.com",
         "to":      "joe@foo.com",

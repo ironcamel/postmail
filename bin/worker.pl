@@ -9,7 +9,7 @@ use JSON qw(from_json);
 use FindBin qw($RealBin);
 use Net::Stomp;
 use Try::Tiny;
-use YAML::XS qw(LoadFile);
+use YAML qw(LoadFile);
 
 my %config = %{LoadFile("$RealBin/../config.yml")};
 my $transport;

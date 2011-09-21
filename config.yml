@@ -15,4 +15,3 @@ plugins:
     Stomp:
         postmail:
             hostname: localhost
-            port: 

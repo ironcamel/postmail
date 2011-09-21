@@ -4,9 +4,9 @@ use warnings;
 use Email::Sender::Simple qw(sendmail);
 use Email::Sender::Transport::SMTP;
 use Email::Simple;
-use Net::Stomp;
 use JSON qw(from_json);
 use FindBin qw($RealBin);
+use Net::Stomp;
 use Try::Tiny;
 use YAML::XS qw(LoadFile);
 
@@ -18,7 +18,7 @@ my $transport = Email::Sender::Transport::SMTP->new({
     sasl_password => $config{postmail}{email}{password},
 });
 my $stomp = Net::Stomp->new({
-    hostname => $config{plugins}{Stomp}{postmail}{host},
+    hostname => $config{plugins}{Stomp}{postmail}{hostname},
     port     => $config{plugins}{Stomp}{postmail}{port},
 });
 $stomp->connect();

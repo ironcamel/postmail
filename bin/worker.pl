@@ -56,7 +56,7 @@ $stomp->disconnect;
 sub send_email {
     my $data = shift;
     my $to = $data->{to};
-    my @to = map { (To => $_) } $to eq 'ARRAY' ? @$to : $to;
+    my @to = map { (To => $_) } ref $to eq 'ARRAY' ? @$to : $to;
     my $email = Email::Simple->create(
         header => [
             @to,

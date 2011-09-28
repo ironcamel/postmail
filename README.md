@@ -35,6 +35,17 @@ Send an email:
     }
     EOD
 
+Send an email to multiple recipients:
+
+    lwp-request -m POST http://localhost:5000/email <<EOD
+    {
+        "from":    "bob@foo.com",
+        "to":      ["joe@foo.com", "bazz@foo.com"],
+        "subject": "hi from postmail",
+        "body":    "bye"
+    }
+    EOD
+
 # Stomp Message Broker
 
 It is very easy to get a Stomp message broker up and running:

@@ -3,14 +3,14 @@
 Postmail is a simple REST based service for sending email. 
 Similar to Amazon's Simple Email Service.
 It is asynchronous and highly scalable.
-Emails are placed on a job queue and multiple workers process them
+Email jobs are placed on a message queue and multiple workers process them
 independently.
 
 # Installation
 
-First install dependencies:
+First install dependencies.
 
-    sudo cpanm Email::Sender Email::Sender::Transport::SMTP::TLS Email::Simple Dancer::Plugin::Stomp JSON Starman Try::Tiny YAML
+    sudo cpanm .
 
 # Usage
 

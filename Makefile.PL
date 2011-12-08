@@ -3,9 +3,10 @@ use warnings;
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
-    NAME                => 'Postmail',
-    VERSION             => 1.0,
-    PL_FILES            => {},
+    NAME          => 'Postmail',
+    AUTHOR        => 'Naveed Massjouni <naveedm9@gmail.com>',
+    VERSION_FROM  => 'lib/Postmail.pm',
+    ABSTRACT_FROM => 'lib/Postmail.pm',
     PREREQ_PM => {
         'Authen::SASL'                        => 0,
         'Email::Sender'                       => 0, 
@@ -17,7 +18,4 @@ WriteMakefile(
         'Try::Tiny'                           => 0, 
         'YAML'                                => 0,
     },
-    dist      => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
-    clean     => { FILES => 'Postmail-*' },
-    test      => { TESTS => join( ' ', (glob( 't/*.t'), glob('t/*/*.t')))},
 );

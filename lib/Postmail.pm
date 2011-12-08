@@ -2,6 +2,8 @@ package Postmail;
 use Dancer ':syntax';
 use Dancer::Plugin::Stomp;
 
+our $VERSION = '0.0001';
+
 post '/email' => sub {
     my $body = request->body;
     debug "sending $body";
@@ -13,3 +15,9 @@ post '/email' => sub {
 };
 
 true;
+
+=head1 NAME
+
+Postmail - Scalable, REST based service for sending email. 
+
+=cut
